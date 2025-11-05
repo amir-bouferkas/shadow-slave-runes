@@ -18,7 +18,6 @@ body {
   min-height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-top: 80px;
 }
 
 /* === Containers === */
@@ -219,4 +218,5 @@ body::after {
   height: 100vh;
   display: flex;
   flex-direction: column;
+
 }
