@@ -18,6 +18,7 @@ body {
   min-height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
+  padding-bottom: 40px; /* prevents buttons being cut on mobile */
 }
 
 /* === Containers === */
@@ -30,8 +31,7 @@ body {
   width: 90%;
   max-width: 900px;
   backdrop-filter: blur(20px);
-    transition: all 0.8s ease;
-
+  transition: all 0.8s ease;
 }
 
 .card {
@@ -40,8 +40,7 @@ body {
   border-radius: 16px;
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
   padding: 20px;
-  width: 90%;
-  justify-self: center;
+  width: 100%;
   max-width: 750px;
   margin-top: 20px;
   color: #f22409;
@@ -72,12 +71,11 @@ h2 {
 
 #result {
   margin-top: 25px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #ffab3d;
   text-shadow: 0 0 12px rgba(244, 65, 24, 0.4);
 }
 
-/* Prevent word cutting */
 p {
   white-space: normal;
   word-break: break-word;
@@ -85,16 +83,15 @@ p {
 
 .glow-text {
   display: inline-block;
-  white-space: pre;
-  word-break: keep-all;
   opacity: 0;
   animation: glowMaterialize 1.2s ease forwards;
+  vertical-align: middle; /* prevents animation from shifting lines */
 }
 
 /* === Inputs & Buttons === */
 input[type="text"] {
   padding: 10px;
-  font-size: 1rem;
+  font-size: 16px; /* stops iOS zoom bug */
   border-radius: 6px;
   border: none;
   text-align: center;
@@ -110,7 +107,7 @@ button {
   background: linear-gradient(9deg, #ff480076, #f9fd0c76);
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 1rem;
   border-radius: 6px;
   cursor: pointer;
@@ -153,21 +150,14 @@ body::after {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
   pointer-events: none;
 }
-/* Fade-out animation */
-.fade-out {
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: all 0.8s ease;
-}
 
-/* Fade-out animation */
+/* === Fade Animations === */
 .fade-out {
   opacity: 0;
   transform: translateY(-15px);
   transition: all 0.8s ease;
 }
 
-/* Fade-in under result */
 .fade-in-under {
   opacity: 0;
   animation: fadeInUnder 1s ease forwards;
@@ -188,6 +178,7 @@ body::after {
 /* Wake-up message */
 .wake-message {
   font-size: 1.4rem;
+  max-width: 90%;
   color: #f8e98a;
   text-shadow:
     0 0 10px rgba(255, 255, 150, 0.8),
@@ -212,11 +203,72 @@ body::after {
     transform: translateY(-10px);
   }
 }
+
 .centered {
   justify-content: center !important;
   align-items: center !important;
   height: 100vh;
   display: flex;
   flex-direction: column;
+}
 
+/* === Feedback Button === */
+#feedbackButton {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 999;
+  background: linear-gradient(9deg, #4a00ff, #00e1ff);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(0, 225, 255, 0.7);
+  transition: all 0.2s ease-in-out;
+}
+
+#feedbackButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 18px rgba(0, 255, 255, 1);
+}
+
+/* === MOBILE & SMALL SCREENS === */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 15px;
+    border-radius: 25px;
+  }
+
+  #result {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  input[type="text"] {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  #feedbackButton {
+    right: 10px;
+    bottom: 10px;
+    padding: 10px 15px;
+    font-size: 0.85rem;
+  }
+
+  .wake-message {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
 }
