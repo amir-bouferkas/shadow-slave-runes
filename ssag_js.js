@@ -252,7 +252,6 @@ const TrueNames = [
 "Black Sun Prophet",
 "the provoker",
 ]
- the provoker
 const Flaws = [
   { name: "impulsive talk", desc: " You cannot stop talking and you cannot hide what you are thinking" },
   { name: "Crimson Decay", desc: "Your body weakens each time you shed blood." },
@@ -1123,4 +1122,5 @@ let flaw = generateflaw()
 
   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 }
+
 
