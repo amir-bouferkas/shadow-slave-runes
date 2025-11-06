@@ -250,11 +250,11 @@ const TrueNames = [
 "Moonlit Path Seeker",
 "Silent Frostblade",
 "Black Sun Prophet",
-
-
+"the provoker",
 ]
-
+ the provoker
 const Flaws = [
+  { name: "impulsive talk", desc: " You cannot stop talking and you cannot hide what you are thinking" },
   { name: "Crimson Decay", desc: "Your body weakens each time you shed blood." },
   { name: "Soul Rot", desc: "Your spirit erodes with every use of power." },
   { name: "Glass Bones", desc: "Each injury leaves you more fragile than before." },
@@ -1004,6 +1004,7 @@ const ASPECTS = [
   { name: "Driftling", rank: "Dormant", description: "You float lightly with the wind.", ability: "Float", abilityDesc: "Move slightly above the ground, avoiding small obstacles." },
   { name: "Mudveil", rank: "Awakened", description: "You hide within mud and dirt easily.", ability: "Conceal", abilityDesc: "Blend with terrain to avoid detection." },
   { name: "Frostbud", rank: "Dormant", description: "A small frost forms around you.", ability: "Chill Aura", abilityDesc: "Cool nearby air and slow small creatures slightly." },
+  { name: "provoker", rank: "Ascended", description: "Conflict follows you not because you seek it, but because the world stirs when you walk through it. People react sharply around you — tempers flare, pride rises, and old grudges wake at your presence. You were never meant for quiet paths. Your fate is to trigger movement in stagnant places, to push others into choices they’ve avoided, and to stand at the center of storms you never asked for.", ability: "Fury Harvest", abilityDesc: "When the enemies is in max rage or they're provocked long enough There strength will be drained, physical and soul essence And those energy will go to you" },
 
 ];
 
@@ -1122,3 +1123,4 @@ let flaw = generateflaw()
 
   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 }
+
