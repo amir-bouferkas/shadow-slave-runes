@@ -253,6 +253,7 @@ const TrueNames = [
 "the provoker",
 ]
 const Flaws = [
+  { name: "Curse of Remembrance", desc: "You can never forget anything you have experienced. The more terrible the memory, the more vividly and painfully it returns, as if it were happening again." },
   { name: "impulsive talk", desc: " You cannot stop talking and you cannot hide what you are thinking" },
   { name: "Crimson Decay", desc: "Your body weakens each time you shed blood." },
   { name: "Soul Rot", desc: "Your spirit erodes with every use of power." },
@@ -1122,6 +1123,7 @@ let flaw = generateflaw()
 
   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 }
+
 
 
 
