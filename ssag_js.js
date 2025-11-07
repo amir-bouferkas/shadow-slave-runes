@@ -1033,12 +1033,12 @@ const attributeText = attributes.map(a => `[${a}]`).join(", ");
 
 function getRank() {
   const r = Math.random();
-  if (r < 0.4) return "Dormant";     
-  if (r < 0.5) return "Awakened" ;    
-  if (r < 0.6) return "Ascended";    
-  if (r < 0.7) return "Transcendent";
-  if (r < 0.8) return "Supreme";
-  if (r < 0.99) return "Sacred";
+  if (r < 0.3) return "Dormant";     
+  if (r < 0.4) return "Awakened" ;    
+  if (r < 0.7) return "Ascended";    
+  if (r < 0.8) return "Transcendent";
+  if (r < 0.9) return "Supreme";
+  if (r < 0.98) return "Sacred";
   if (r < 0.999) return "Divine";
 }
 
@@ -1123,6 +1123,7 @@ let flaw = generateflaw()
 
   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 }
+
 
 
 
