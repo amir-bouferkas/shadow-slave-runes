@@ -48,6 +48,10 @@ async function generateResult() {
   result.classList.add("visible");
 
 const TrueNames = [
+"Paragon of death",
+"Soul Seeker",
+"Crimson Heart",
+"Blooming Poison"
 "Lost from Light",
 "Changing Star",
 "Song of the Fallen",
@@ -1123,6 +1127,7 @@ let flaw = generateflaw()
 
   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 }
+
 
 
 
